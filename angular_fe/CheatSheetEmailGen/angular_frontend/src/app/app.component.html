@@ -1,0 +1,41 @@
+<!-- Doc Comments:
+1. Note that we need to ensure that the ngbDropdownMenu and ngbDropdownItem tags are placed to ensure that they can be picked up by the webserver 
+
+2. If you want to get the links to be active, instead of writing js helper functions you can use routerLinkActive="active" instead 
+
+3. Doesnt concern us, but if by any chance, if the router links are too similar then we can use [routerLinkActiveOptions]="{exact: true}" to ensure that only
+    the exact optins are triggered.
+
+4. The router-outlet is pretty much where all of the data is displayed, this is also why the app body is only applied to the router outlet
+
+-->
+
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded nav-styles justify-content-center">
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a class = "nav-link" routerLink="/home" routerLinkActive="active">Home</a></li>
+            <li class='nav-item'><a class = "nav-link" routerLink="/cheatsheet" routerLinkActive="active">Cheatsheets</a></li>
+
+            <li class="nav-item dropdown">
+                <div ngbDropdown class = "d-inline-block dropdown-links dropdown">
+                    <button class = "btn btn-outline-primary" id="emailGenDropDown" ngbDropdownToggle>
+                        Email Generator
+                        <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="emailGenDropDown"> 
+
+                            <a ngbDropdownItem class="dropdown-item" routerLink="/emailGenlist" routerLinkActive="active">List Past Emails</a>
+                            <a ngbDropdownItem class="dropdown-item" routerLink="/emailGencreate" routerLinkActive="active">Create new emails</a>
+
+                        </div>
+                    </button>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+</nav>
+  
+<div>
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,21 @@
+
+
+<div class="container">
+    <h1 class="headline">Cheatsheets!</h1>
+    <div class="card" *ngFor = "let cheatsheet of cheatsheets">
+        <div class="card-block">
+            <h4 class="card-title">
+                {{cheatsheet.title}}
+            </h4>
+
+            <p>{{cheatsheet.description}}</p>
+
+            <div>
+                <a class="btn btn-lg btn-primary" href="{{cheatsheet.file_url}}">Download Cheat Sheet</a>
+            </div>
+
+            <p class="card-text"><small class = "text-muted">{{cheatsheet.updated_at}}</small></p>
+        </div>
+
+    </div>
+</div>

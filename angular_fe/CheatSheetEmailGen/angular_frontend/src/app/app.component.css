@@ -1,0 +1,11 @@
+/*
+These are the document comments for this document, there will be sectional comments too
+
+1. This is the style sheet for app.component.html
+*/
+
+.nav-styles {
+    background-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+

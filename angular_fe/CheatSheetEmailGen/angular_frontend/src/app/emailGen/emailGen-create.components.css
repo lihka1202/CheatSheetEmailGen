@@ -1,0 +1,22 @@
+.form-padding {
+    padding: 30px;
+}
+
+.label-padding-companyname {
+    padding: 10px;
+}
+
+.label-padding-companymembers {
+    padding: 10px;
+}
+
+.label-padding-companyfeature {
+    padding: 10px;
+}
+
+.label-padding {
+    padding: 10px;
+    font-style: oblique;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}

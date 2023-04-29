@@ -1,0 +1,20 @@
+<!-- For the display part, we are more open to using a span instead of a div, mainly because you can click any aspect of the span and the
+link would be clicked, but for div you have to press the specific link to move along the navigator, this can become a big issue, hence it is better 
+for the time being -->
+
+<div class="container">
+
+    <div class="list-group">
+        <a class="list-group-item list-group-item-action active">
+            <h1>Past Emails</h1>
+        </a>
+
+        <span *ngFor = "let email of emailList" class="list-group-item list-group-item-action">
+            <a routerLink ='/emailGenshow/{{email.id}}' class="hover-link"> <h5 class="list-group-item-heading heading-style">{{email.company_name}}</h5> <!--Just remember to ensure that the email gen has a / before it-->
+                <p class="list-group-item-text feature-style">
+                    {{email.unique_feature}}
+                </p>
+            </a>
+        </span>
+    </div>
+</div>

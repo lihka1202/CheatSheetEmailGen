@@ -1,0 +1,102 @@
+
+
+<div class="card container form-padding">
+    <h1>Create new emails!</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <form #proposalForm = "ngForm">
+                    <div class = "form-group">
+                        <label for = "company" class="label-padding">Company Name </label>
+                        <input type = "text"
+                            class="form-control"
+                            id = "company"
+                            placeholder="Name of Company"
+                            required
+                            name = "company"
+                            #company = 'ngModel'
+                            [(ngModel)] = "emailgen.company_name"
+                        >
+                        <div [hidden] = "company.valid || company.pristine" class="alert alert-danger">
+                            Please do not leave the name of the company empty
+                        </div>
+                    </div>
+                    <div class = "form-group">
+                        <label for = "company_members" class="label-padding">Company Members</label>
+                        <input type = "text"
+                            class="form-control"
+                            id = "company_members"
+                            placeholder="C-Suite Members"
+                            required
+                            name = "company_members"
+                            #company_members = 'ngModel'
+                            [(ngModel)] = "emailgen.company_members"
+                        >
+                        <div [hidden] = "company_members.valid || company_members.pristine " class="alert alert-danger">
+                            Please do not leave the list of company members empty
+                        </div>
+                    </div>
+                    <div class = "form-group">
+                        <label for = "feature" class="label-padding">Unique Feature</label>
+                        <input type = "text"
+                            class="form-control"
+                            id = "feature"
+                            placeholder="Reason behind interest"
+                            required
+                            name = "feature"
+                            #feature = 'ngModel'
+                            [(ngModel)] = "emailgen.unique_feature"
+                        >
+                        <div [hidden] = "feature.valid || feature.pristine" class="alert alert-danger">
+                            Please do not leave the unique features empty
+                        </div>
+                    </div>
+        
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div>
+                <p>Dear {{emailgen.company_members}} at {{emailgen.company_name}},</p>
+            
+                <p>I hope this email finds you well. I am Muthya Narayanachary Akhil, a Second-year student studying Computer Engineering at the National University of Singapore (NUS). I am writing to express my deep interest in an internship opportunity at {{emailgen.company_name}}. I had the opportunity to learn more about your company and I was thoroughly impressed by the vision and mission that you have set forth.</p>
+            
+                <p>I am particularly drawn to how {{emailgen.company_name}} is revolutionising {{emailgen.unique_feature}} and I am eager to contribute my skills and learn from the experienced professionals at your company.</p>
+            
+                <p>As a Computer Engineering student, I have experience in mobile and web development, hardware prototyping and amateur algorithmic trading. I am confident that these skills, combined with my passion for technology and drive to learn, make me a strong candidate for the internship at your company. Hence, I would like to inquire if your team is open to taking me on a full-time internship from 9 Jul 2023 to 21 Dec 2023 (24 weeks).</p>
+            
+                <p>I am enrolled in the NUS Overseas Colleges (NOC) programme, an entrepreneurship internship with young innovative companies at entrepreneurial hubs around the world for 6 months in hopes that we will be inspired and learn to start our own enterprises. I invite you to visit our website for additional details:</p>
+            
+                <p>https://enterprise.nus.edu.sg/education-programmes/nus-overseas-colleges/programmes/our-noc-locations/israel/</p>
+            
+                <p>Some details on the program are as follows:</p>
+            
+                <p>1 The program is in partnership with Reichman University;</p>
+            
+                <p>2 It should be an onsite internship arrangement;</p>
+            
+                <p>3 It entails a full-time internship (working an average of 35-40 hours a week) with a start-up/young innovative company;</p>
+            
+                <p>4 Students are required to take a New Venture Creation course with Reichman University. Students will advise on the exact schedule once it is confirmed and arrangements can be made to make up for the loss of time in the office;</p>
+            
+                <p>5 The participating company is required to pay a program fee of ILS 4,000 per student per month to cover the students' monthly living expenses and housing costs. This will be invoiced to the internship company twice during the internship period;</p>
+            
+                <p>6 Our university will cover the students' round-trip airfare, visa application costs, insurance and other program-related expenses;</p>
+            
+                <p>Attached are my resume and a reference letter from the CEO of a startup I interned at for your perusal. I have also CCed Peng Kee, the Programme Manager for NOC Israel, in this email who will have a preliminary call with you if you are interested.</p>
+            
+                <p>Thank you for considering my application. I would welcome the opportunity to discuss my qualifications further and learn more about the internship program at your company. I am available for an interview at your convenience.</p>
+            
+                <p>I look forward to hearing from you soon!</p>
+            
+                <p>Warmest Regards,</p>
+            
+                <p>Muthya Narayanachary Akhil</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
