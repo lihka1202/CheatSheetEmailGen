@@ -1,0 +1,2 @@
+class RailsDocument < ApplicationRecord
+end
